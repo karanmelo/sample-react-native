@@ -20,7 +20,7 @@
     "node_modules",
     "babel.config.json",
     "metro.config.js",
-    "jest.config"
+    "jest.config.js"
   ],
-  "include": ["src"]
+  "include": ["src", "__tests__/src/services/valdiation/objects/schemaValidator.test.ts"]
 }

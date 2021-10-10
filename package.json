@@ -10,6 +10,8 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
+    "test:watch": "jest --watch -c jest-unit.config.js",
+    "test:cov": "jest --coverage",
     "lint": "tsc --noEmit && eslint --fix --ext ts,tsx ."
   },
   "dependencies": {
