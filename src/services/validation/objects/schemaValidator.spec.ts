@@ -1,9 +1,6 @@
-import { composite } from '../../../../../src/services/validation/composite'
-import { schemaValidator } from '../../../../../src/services/validation/objects/schemaValidator'
-import {
-  emailValidator,
-  requiredValidator,
-} from '../../../../../src/services/validation/validators'
+import { composite } from '../composite'
+import { emailValidator, requiredValidator } from '../validators'
+import { schemaValidator } from './schemaValidator'
 
 describe('Schema Validator', () => {
   it('should test composition of validators nested', async () => {
