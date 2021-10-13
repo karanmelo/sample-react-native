@@ -2,6 +2,7 @@ import React from 'react'
 
 import { ActivityIndicator } from 'react-native'
 
+import { useTheme } from '../../store'
 import { sg } from '../../styles/styleGuide'
 import * as S from './styles'
 
@@ -10,10 +11,12 @@ export type LoadingProps = {
 }
 
 export const Loading: React.FC<LoadingProps> = ({ size = 'small' }) => {
+  const { theme } = useTheme()
+
   return (
     <S.Container>
       <ActivityIndicator
-        color={sg.colors.purple}
+        color={theme.colors.border}
         animating={true}
         size={size}
       />
