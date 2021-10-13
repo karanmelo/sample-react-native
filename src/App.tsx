@@ -1,11 +1,13 @@
 import React from 'react'
 
 import { Router } from './router'
-import { ThemeProvider } from './store/'
+import { ThemeProvider, AuthProvider } from './store/'
 
 const App: React.FC = () => (
   <ThemeProvider>
-    <Router />
+    <AuthProvider>
+      <Router />
+    </AuthProvider>
   </ThemeProvider>
 )
 
