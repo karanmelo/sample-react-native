@@ -23,7 +23,6 @@ export const InputWrapper = styled(View)<InputWrapperProps>`
   padding: 0px;
   margin: 0px;
 
-  display: flex;
   flex-direction: row;
   align-items: center;
 
@@ -44,7 +43,7 @@ export const Label = styled(Text)<LabelProps>`
   font-style: normal;
   font-weight: normal;
   font-size: ${({ hasValue }) =>
-    hasValue ? sg.fontSize.medium : sg.fontSize.small};
+    hasValue ? sg.fontSize.small : sg.fontSize.medium};
   line-height: 22px;
 
   color: ${({ disabled, theme }) =>
