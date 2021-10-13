@@ -13,7 +13,10 @@ interface ThemeContextData {
 interface Theme {
   name: string
   colors: {
-    body: string
+    primary: string
+    secundary: string
+    border: string
+    shadow: string
     text: string
   }
 }
