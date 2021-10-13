@@ -31,7 +31,6 @@ export const InputWrapper = styled(View)<InputWrapperProps>`
 `
 
 export type LabelProps = {
-  disabled: boolean
   hasValue: boolean
 }
 
@@ -46,8 +45,8 @@ export const Label = styled(Text)<LabelProps>`
     hasValue ? sg.fontSize.small : sg.fontSize.medium};
   line-height: 22px;
 
-  color: ${({ disabled, theme }) =>
-    disabled || theme.name === 'light' ? sg.colors.gray : sg.colors.lightGray};
+  color: ${({ theme }) =>
+    theme.name === 'light' ? sg.colors.gray : sg.colors.lightGray};
 `
 export const Error = styled(Text)`
   margin-bottom: 8px;
@@ -78,7 +77,11 @@ export const Input = styled(TextInput)<InputProps>`
   font-size: ${sg.fontSize.small};
 
   color: ${({ disabled, theme }) =>
-    disabled ? sg.colors.gray : theme.colors.text};
+    disabled
+      ? theme.name === 'light'
+        ? sg.colors.gray
+        : sg.colors.lightGray
+      : theme.colors.text};
 `
 
 export const Icon = styled(View)`

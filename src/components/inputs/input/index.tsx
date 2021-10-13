@@ -142,12 +142,7 @@ export const TextInput: React.FC<TextInputProps> = ({
     if (!label) return
 
     return (
-      <S.Label
-        hasValue={value !== undefined && value !== ''}
-        disabled={isDisabled}
-      >
-        {label}
-      </S.Label>
+      <S.Label hasValue={value !== undefined && value !== ''}>{label}</S.Label>
     )
   }
 
