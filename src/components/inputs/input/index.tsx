@@ -42,7 +42,7 @@ export const TextInput: React.FC<TextInputProps> = ({
   validationDependency,
   size = 50,
   keyboardType,
-  autoCapitalize,
+  autoCapitalize = 'none',
   onChange: onChangeValue,
   validator = requiredValidator,
   mask = (maskValue: string) => maskValue,
