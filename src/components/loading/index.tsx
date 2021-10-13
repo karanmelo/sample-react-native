@@ -3,7 +3,6 @@ import React from 'react'
 import { ActivityIndicator } from 'react-native'
 
 import { useTheme } from '../../store'
-import { sg } from '../../styles/styleGuide'
 import * as S from './styles'
 
 export type LoadingProps = {
