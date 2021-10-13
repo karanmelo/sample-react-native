@@ -7,7 +7,7 @@ import { AuthData, signIn as signInService } from '../services/auth'
 type AuthContextData = {
   authData?: AuthData
   loading: boolean
-  signIn(user: string, password: string): Promise<void>
+  signIn(params: { user: string; password: string }): Promise<void>
   signOut(): void
 }
 
@@ -35,8 +35,8 @@ const AuthProvider: React.FC = ({ children }) => {
     }
   }
 
-  const signIn = async (user: string, password: string) => {
-    const _authData: AuthData = await signInService({ user, password })
+  const signIn = async (params: { user: string; password: string }) => {
+    const _authData: AuthData = await signInService(params)
 
     setAuthData(_authData)
 
