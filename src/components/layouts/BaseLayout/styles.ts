@@ -1,10 +1,8 @@
-import { Image, View, ScrollView } from 'react-native'
+import { Image, View, ImageBackground } from 'react-native'
 import styled from 'styled-components'
 
-export const Container = styled(ScrollView)`
+export const Container = styled(View)`
   flex: 1;
-
-  background-color: ${props => props.theme.colors.body};
 `
 
 export const Logo = styled(Image)`
@@ -14,6 +12,10 @@ export const Logo = styled(Image)`
 `
 
 export const Content = styled(View)`
-  margin-top: 40px;
+  flex: 1;
   padding: 0 22px 62px 22px;
+`
+
+export const Background = styled(ImageBackground)`
+  flex: 1;
 `

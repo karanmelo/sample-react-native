@@ -9,10 +9,15 @@ type BaseLayoutProps = {
 
 export const BaseLayout: React.FC<BaseLayoutProps> = ({ children }) => (
   <KeyboardAvoidingView>
-    <S.Container keyboardShouldPersistTaps="handled">
-      <S.Logo source={require('../../../assets/images/logo.png')} />
+    <S.Background
+      source={require('../../../assets/images/signin_background.jpg')}
+      resizeMode="cover"
+    >
+      <S.Container>
+        <S.Logo source={require('../../../assets/images/logo.png')} />
 
-      <S.Content>{children}</S.Content>
-    </S.Container>
+        <S.Content>{children}</S.Content>
+      </S.Container>
+    </S.Background>
   </KeyboardAvoidingView>
 )
