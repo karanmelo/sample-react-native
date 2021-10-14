@@ -9,7 +9,7 @@ import {
 import { sg } from '../../styles/styleGuide'
 
 export const toastConfig = {
-  success: ({ ...rest }: BaseToastProps) => (
+  success: (rest: BaseToastProps) => (
     <SuccessToast
       {...rest}
       text1Style={{
