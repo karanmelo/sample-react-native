@@ -1,5 +1,4 @@
-import { KeyboardAvoidingView } from 'react-native'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { KeyboardAvoidingView, SafeAreaView } from 'react-native'
 import styled from 'styled-components'
 
 export const SafeAreaViewWrapper = styled(SafeAreaView)`
