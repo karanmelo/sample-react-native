@@ -4,7 +4,7 @@ import { freeze } from '../../utils/freeze'
 export const signIn: SignIn = async ({ user }) => {
   await freeze()
 
-  if (user !== 'admin') throw new Error('Invalid authentication')
+  if (user !== 'admin') throw new Error('Usuário não encontrado')
 
   return {
     access_token:
