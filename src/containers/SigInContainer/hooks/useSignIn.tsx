@@ -1,7 +1,10 @@
 import { useState } from 'react'
 
+import Toast from 'react-native-toast-message'
+
 import { useIsMounted } from '../../../hooks'
 import { useAuth } from '../../../store/auth'
+import { sg } from '../../../styles/styleGuide'
 import { SingInEnum, SingInType } from '../types'
 import { validator } from '../valdiations/validation'
 
@@ -34,12 +37,29 @@ export const useSignIn = () => {
       const formIsValid = await validator(formData)
 
       if (!formIsValid.isValid) {
-        return console.log(formIsValid.errors)
+        if (!isMounted.current) return
+        return Toast.show({
+          type: 'error',
+          text1: 'Erro ao validar os dados',
+          text2: 'Verifique se digitou corretamente e tente novamente',
+        })
       }
 
       await signIn(formData)
+
+      return Toast.show({
+        type: 'success',
+        text1: 'Login efetuado com sucesso!',
+      })
     } catch (error) {
-      console.log(error)
+      if (!isMounted.current) return
+      const parsedError = error as Error
+
+      return Toast.show({
+        type: 'error',
+        text1: 'Erro ao tentar fazer login',
+        text2: parsedError.message,
+      })
     } finally {
       if (isMounted.current) {
         setLoading(false)
