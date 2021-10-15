@@ -5,12 +5,19 @@ import * as S from './styles'
 
 type BaseLayoutProps = {
   children: JSX.Element
+  opacity?: number
 }
 
-export const BaseLayout: React.FC<BaseLayoutProps> = ({ children }) => (
+export const BaseLayout: React.FC<BaseLayoutProps> = ({
+  children,
+  opacity = 0.3,
+}) => (
   <KeyboardAvoidingView>
     <S.Background
       source={require('../../../assets/images/signin_background.jpg')}
+      imageStyle={{
+        opacity,
+      }}
       resizeMode="cover"
     >
       <S.Container>
