@@ -18,7 +18,7 @@ export const SigInContainer: React.FC = () => {
     useSignIn()
 
   return (
-    <BaseLayout>
+    <BaseLayout opacity={1}>
       <S.LoginContainer>
         <Card height={420}>
           <S.CardContainer>
