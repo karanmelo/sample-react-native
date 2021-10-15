@@ -16,7 +16,9 @@ export const ButtonWrapper = styled(TouchableOpacity)<ButtonWrapperProps>`
   justify-content: center;
 
   border-radius: 4px;
-  background-color: ${({ theme }) => theme.colors.border};
+  border: 1px solid ${({ theme }) => theme.colors.border};
+  background-color: ${({ theme, outline }) =>
+    !outline ? theme.colors.border : 'transparent'};
 
   color: ${props => (props.outline ? sg.colors.purple : sg.colors.white)};
 `
@@ -28,5 +30,6 @@ export const Text = styled(RNText)<ButtonWrapperProps>`
   font-size: ${sg.fontSize.small};
   line-height: 16px;
 
-  color: ${props => (props.outline ? sg.colors.purple : sg.colors.white)};
+  color: ${({ theme, outline }) =>
+    outline ? theme.colors.border : sg.colors.white};
 `
