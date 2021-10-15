@@ -1,3 +1,2 @@
-import { SigInContainer } from './SigInContainer'
-
-export { SigInContainer }
+export { SigInContainer } from './SigInContainer'
+export { SettingsContainer } from './SettingsContainer'
