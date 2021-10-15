@@ -4,7 +4,6 @@ import Toast from 'react-native-toast-message'
 
 import { useIsMounted } from '../../../hooks'
 import { useAuth } from '../../../store/auth'
-import { sg } from '../../../styles/styleGuide'
 import { SingInEnum, SingInType } from '../types'
 import { validator } from '../valdiations/validation'
 
@@ -47,6 +46,7 @@ export const useSignIn = () => {
 
       await signIn(formData)
 
+      if (!isMounted.current) return
       return Toast.show({
         type: 'success',
         text1: 'Login efetuado com sucesso!',
