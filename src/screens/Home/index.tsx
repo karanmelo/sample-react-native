@@ -1,3 +1,7 @@
 import React from 'react'
 
-export const Home: React.FC = () => <></>
+import { TabNavigation } from '../../components'
+
+export const Home: React.FC = () => {
+  return <TabNavigation />
+}
