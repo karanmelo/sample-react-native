@@ -7,9 +7,10 @@ import { AppStack } from './appStack'
 import { AuthStack } from './authStack'
 
 export const Router = () => {
-  const { authData } = useAuth()
+  const { authData, loading } = useAuth()
 
   const renderNavigation = () => {
+    if (loading) return <></>
     if (!authData) return <AuthStack />
     return <AppStack />
   }
