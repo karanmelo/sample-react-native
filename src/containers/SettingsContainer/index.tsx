@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { BaseLayout } from '../../components/layouts'
+import { BaseLayout } from '../../components/Layouts'
 import { Row } from '../../styles/utils'
 import { SignOutModal } from './components'
 import { useSettings } from './hooks/useSettings'

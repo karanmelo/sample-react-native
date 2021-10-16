@@ -1,4 +1,4 @@
-import { TextInput } from './input'
-import { PasswordInput } from './password'
+import { TextInput } from './Input'
+import { PasswordInput } from './Password'
 
 export { TextInput, PasswordInput }

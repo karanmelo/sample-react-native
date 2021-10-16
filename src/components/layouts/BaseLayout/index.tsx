@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { KeyboardAvoidingView } from '../../keyboardAvoidingView'
+import { KeyboardAvoidingView } from '../../KeyboardAvoidingView'
 import * as S from './styles'
 
 type BaseLayoutProps = {

@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { Button, Card, Loading, TextInput } from '../../components'
-import { PasswordInput } from '../../components/inputs'
-import { BaseLayout } from '../../components/layouts/'
+import { PasswordInput } from '../../components/Inputs'
+import { BaseLayout } from '../../components/Layouts'
 import { composite } from '../../services/validation/composite'
 import {
   passwordValidator,
