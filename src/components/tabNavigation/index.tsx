@@ -18,8 +18,10 @@ export const TabNavigation: React.FC = () => {
       labeled={false}
       activeColor={sg.colors.white}
       inactiveColor={sg.colors.dark}
-      // sceneAnimationEnabled={true}
       barStyle={{ backgroundColor: theme.colors.border }}
+      screenOptions={{
+        tabBarTestID: 'TabNavigation',
+      }}
     >
       <Tab.Screen
         name="Home"
