@@ -63,7 +63,6 @@ export const useSignIn = () => {
     } finally {
       if (isMounted.current) {
         setLoading(false)
-        setFormSubmitted(undefined)
       }
     }
   }
