@@ -1,12 +1,20 @@
 import React from 'react'
 
 import { BaseLayout } from '../../components/Layouts'
-import { Row } from '../../styles/utils'
+import { Screens } from '../../router'
+import { Line, Row } from '../../styles/utils'
+import { Navigation } from '../../types/navigation'
 import { SignOutModal } from './components'
 import { useSettings } from './hooks/useSettings'
 import * as S from './styles'
 
-export const SettingsContainer: React.FC = () => {
+export type SettingsContainerProps = {
+  navigation: Navigation
+}
+
+export const SettingsContainer: React.FC<SettingsContainerProps> = ({
+  navigation,
+}) => {
   const {
     username,
     isSignOut,
@@ -26,7 +34,9 @@ export const SettingsContainer: React.FC = () => {
                 <S.SettingsTitle>Dados pessoais</S.SettingsTitle>
               </>
             </S.SettingsOption>
-            <S.SettingsOption onPress={() => true}>
+            <S.SettingsOption
+              onPress={() => navigation.navigate(Screens.UPDATE_PASSWORD)}
+            >
               <>
                 <S.LockPasswordIcon name="lock" />
                 <S.SettingsTitle>Alterar senha</S.SettingsTitle>
@@ -41,7 +51,7 @@ export const SettingsContainer: React.FC = () => {
           </S.SettingsContent>
         </Row>
         <Row marginTop={16}>
-          <S.Line />
+          <Line />
         </Row>
         <Row marginTop={32}>
           <S.Header>

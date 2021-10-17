@@ -15,12 +15,6 @@ export const Header = styled(View)`
   align-items: center;
 `
 
-export const Line = styled(View)`
-  width: 100%;
-  height: 1px;
-  background-color: ${({ theme }) => theme.colors.button};
-`
-
 export const Avatar = styled(View)`
   width: 36px;
   height: 36px;
