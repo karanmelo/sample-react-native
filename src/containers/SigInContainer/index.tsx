@@ -49,6 +49,7 @@ export const SigInContainer: React.FC = () => {
               <Button
                 text="Acessar"
                 padding={'18px 0'}
+                disabled={loading}
                 onPress={handleSignIn}
               />
             </Row>
