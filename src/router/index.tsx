@@ -1,7 +1,7 @@
 export enum Screens {
   LOGIN = 'LOGIN',
   HOME = 'HOME',
-  FORGOT_PASSWORD = 'FORGOT_PASSWORD',
+  UPDATE_PASSWORD = 'UPDATE_PASSWORD',
 }
 
 export { Router } from './router'
