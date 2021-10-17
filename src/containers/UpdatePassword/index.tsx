@@ -5,23 +5,12 @@ import { useNavigation } from '@react-navigation/core'
 import { Button, Loading } from '../../components'
 import { PasswordInput } from '../../components/Inputs'
 import { Row } from '../../styles/utils'
-import {
-  SubmitResponse,
-  useUpdatePasswordData,
-} from './hooks/useUpdatePasswordData'
+import { useUpdatePasswordData } from './hooks/useUpdatePasswordData'
 import * as S from './styles'
 import { UpdatePasswordEnum } from './types'
 import { updatePasswordValidation } from './validations'
 
-export type UpdatePasswordType = {
-  onSubmit?: (response: SubmitResponse) => void
-  renderSubmitContent?: (
-    submitForm: (response: SubmitResponse) => void,
-  ) => JSX.Element
-}
-
-export const UpdatePasswordContainer: React.FC<UpdatePasswordType> = _props => {
-  // const { onSubmit, renderSubmitContent } = props
+export const UpdatePasswordContainer: React.FC = () => {
   const { formData, formSubmitted, loading, changeData, submitForm } =
     useUpdatePasswordData()
 
@@ -30,7 +19,7 @@ export const UpdatePasswordContainer: React.FC<UpdatePasswordType> = _props => {
   return (
     <S.UpdatePasswordContainer>
       <Row>
-        <S.Text>Atualizar senha</S.Text>
+        <S.Text>Alterar senha</S.Text>
       </Row>
       <Row marginTop={64}>
         <PasswordInput
