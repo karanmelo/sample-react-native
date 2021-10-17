@@ -41,7 +41,7 @@ export const SignOutModal: React.FC<SignOutModalProps> = ({
 
   return (
     <Modal visible={visible} onClose={onClose}>
-      <Row marginTop={18}>
+      <Row>
         <S.Header>
           <S.Title>{title}</S.Title>
           <Row marginTop={6}>
