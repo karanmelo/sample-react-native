@@ -29,6 +29,7 @@ export const SigInContainer: React.FC = () => {
                 onChange={(value: string) => {
                   changeData(SingInEnum.USER)(value.toString())
                 }}
+                asyncValidation={true}
                 disabled={loading}
                 touched={formSubmitted}
               />
@@ -41,6 +42,7 @@ export const SigInContainer: React.FC = () => {
                   changeData(SingInEnum.PASSWORD)(value.toString())
                 }}
                 validator={composite([requiredValidator, passwordValidator])}
+                asyncValidation={true}
                 disabled={loading}
                 touched={formSubmitted}
               />
