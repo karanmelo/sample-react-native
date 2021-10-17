@@ -34,7 +34,7 @@ export const Modal: React.FC<ModalProps> = ({
         <S.ModalHeader>
           <S.CloseButton name="grip-lines" onPress={handleToggleModal} />
         </S.ModalHeader>
-        {children}
+        <S.ModalContent>{children}</S.ModalContent>
       </S.ModalView>
     </RNModal>
   )

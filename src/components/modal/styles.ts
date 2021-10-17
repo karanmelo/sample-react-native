@@ -10,10 +10,8 @@ export type ModalViewProps = {
 
 export const ModalView = styled(View)<{ size: string }>`
   position: absolute;
-
   width: 100%;
   min-height: ${props => props.size};
-  padding: 15px 35px;
   bottom: 0;
 
   background-color: ${({ theme }) => theme.colors.primary};
@@ -24,10 +22,11 @@ export const ModalView = styled(View)<{ size: string }>`
 export const ModalHeader = styled(View)`
   align-items: center;
 
-  padding-bottom: 10px;
+  padding: 10px;
+`
 
-  /* border-bottom-width: 0.2px;
-  border-bottom-color: ${({ theme }) => theme.colors.secundary}; */
+export const ModalContent = styled(View)`
+  padding: 15px 35px;
 `
 
 export const CloseButton = styled(Icon)`
