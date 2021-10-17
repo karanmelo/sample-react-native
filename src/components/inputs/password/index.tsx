@@ -7,6 +7,7 @@ export type PasswordInputProps = Omit<TextInputProps, 'icon'>
 
 export const PasswordInput: React.FC<PasswordInputProps> = props => {
   const [showPassword, setShowPassword] = useState(false)
+  const { disabled } = props
 
   const handleChangePassorwdVisibility = () => {
     setShowPassword(!showPassword)
@@ -18,8 +19,8 @@ export const PasswordInput: React.FC<PasswordInputProps> = props => {
       secureTextEntry={!showPassword}
       icon={
         <S.IconWrapper
-          name={showPassword ? 'eye-off' : 'eye'}
-          onPress={handleChangePassorwdVisibility}
+          name={showPassword ? 'eye' : 'eye-off'}
+          onPress={() => !disabled && handleChangePassorwdVisibility()}
         />
       }
     />
