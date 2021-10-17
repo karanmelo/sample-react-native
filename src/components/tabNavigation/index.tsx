@@ -2,7 +2,8 @@ import React from 'react'
 
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
 
-import { HomeContainer, SettingsContainer } from '../../containers'
+import { HomeContainer } from '../../containers'
+import { Settings } from '../../screens'
 import { useTheme } from '../../store/theme'
 import { sg } from '../../styles/styleGuide'
 import * as S from './styles'
@@ -34,7 +35,7 @@ export const TabNavigation: React.FC = () => {
       />
       <Tab.Screen
         name="Settings"
-        component={SettingsContainer}
+        component={Settings}
         options={{
           tabBarIcon: ({ color }) => (
             <S.IconWrapper name="settings" color={color} size={20} />
