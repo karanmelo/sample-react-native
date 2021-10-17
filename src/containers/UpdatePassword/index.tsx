@@ -41,7 +41,6 @@ export const UpdatePasswordContainer: React.FC<UpdatePasswordType> = _props => {
           touched={formSubmitted}
           asyncValidation={true}
           disabled={loading}
-          autoCapitalize="none"
         />
       </Row>
       <Row marginTop={32}>
@@ -53,7 +52,6 @@ export const UpdatePasswordContainer: React.FC<UpdatePasswordType> = _props => {
           touched={formSubmitted}
           asyncValidation={true}
           disabled={loading}
-          autoCapitalize="none"
         />
       </Row>
       <Row marginTop={32}>
