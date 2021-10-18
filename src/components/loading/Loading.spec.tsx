@@ -2,22 +2,22 @@ import React from 'react'
 
 import renderer from 'react-test-renderer'
 
-import { Loading } from './index'
+import * as hooks from '../../store/theme'
+import { lightTheme } from '../../styles/themes'
+import { Loading } from './'
 
-describe('Component Loading', () => {
-  it('should render component', async () => {
-    const loading = renderer.create(<Loading />).toJSON()
+describe('Component - Loading', () => {
+  const theme = lightTheme
 
-    expect(loading).toMatchInlineSnapshot(`
-      <View
-        className="sc-bdfBQB urud"
-      >
-        <ActivityIndicator
-          animating={true}
-          color="#974CFD"
-          size="small"
-        />
-      </View>
-    `)
+  beforeAll(() => {
+    jest
+      .spyOn(hooks, 'useTheme')
+      .mockImplementation(() => ({ theme, toggleTheme: jest.fn() }))
+  })
+
+  it('should be render component', async () => {
+    const component = renderer.create(<Loading />)
+
+    expect(component).toMatchSnapshot()
   })
 })
