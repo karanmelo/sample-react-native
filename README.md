@@ -18,6 +18,8 @@
 
 :small_blue_diamond: [Run](#run)
 
+:small_blue_diamond: [License](#license)
+
 
 ## Project Description 
 
@@ -96,3 +98,10 @@ Create the .env file based on the .env.example file.
 :memo:  Home screen;
 
 :memo:  And the sky is not the limit...
+
+
+## License
+
+Sample React Native App is MIT licensed, as found in the [LICENSE][l] file.
+
+[l]: https://github.com/karanmelo/sample-react-native/blob/master/LICENSE.md
