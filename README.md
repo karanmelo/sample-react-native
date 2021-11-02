@@ -16,6 +16,8 @@
 
 :small_blue_diamond: [Prerequisites](#prerequisites)
 
+:small_blue_diamond: [Instructions](#instructions)
+
 :small_blue_diamond: [Run](#run)
 
 :small_blue_diamond: [License](#license)
@@ -48,6 +50,10 @@
 :warning: [Node](https://nodejs.org/en/download/)
 :warning: [Yarn](https://classic.yarnpkg.com/en/docs/install#windows-stable)
 :warning: [Xcode](https://developer.apple.com/xcode/)
+
+## Instructions
+
+The app user is ```admin``` and password should contains a strong value, with minimum 8 caracters.
 
 ## Run
 Clone the project: 
